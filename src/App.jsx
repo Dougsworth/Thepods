@@ -16,7 +16,7 @@ const App = () => {
           <strong>Don’t wait—spaces are going fast!</strong>
         </p>
         <img
-          src="/housee.png"
+          src="/apart.jpeg"
           alt="Rental Property"
           className="property-image fade-in"
         />
