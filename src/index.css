@@ -1,35 +1,29 @@
-/* General Reset */
+/* Reset styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body: Enables scrolling and responsiveness */
+/* Body */
 body {
   margin: 0;
-  padding: 0;
   font-family: "Arial", sans-serif;
-  background: linear-gradient(
-    180deg,
-    #fefaf0 60%,
-    #f7f3e9
-  ); /* Subtle gradient */
+  background: linear-gradient(180deg, #fefaf0, #f7f3e9); /* Subtle gradient */
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-y: auto; /* Enables vertical scrolling */
-  overflow-x: hidden; /* Prevents horizontal overflow */
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
-/* Container: Adjust width dynamically */
+/* Container */
 .container {
   width: 100%;
   max-width: 420px;
   padding: 1rem;
-  margin: 1rem auto; /* Adds spacing from the edges */
+  margin: 1rem auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -38,31 +32,15 @@ body {
   min-height: calc(100vh - 2rem); /* Ensures content spans full height */
 }
 
-/* Card: Center content and add a shadow */
+/* Card */
 .card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: center;
-  width: 100%; /* Ensures card adapts to container width */
-  animation: slideIn 1s ease-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Prevents overflowing content */
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Image: Makes it responsive and limits height */
-.property-image {
-  width: 100%;
-  max-height: 250px; /* Optimized for all screens */
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  animation: slideUp 1s ease-out;
+  overflow: hidden;
 }
 
 /* Title and Subtitle */
@@ -70,7 +48,6 @@ body {
   font-size: 2rem;
   color: #457b9d;
   margin-bottom: 0.5rem;
-  line-height: 1.2;
 }
 
 .subtitle {
@@ -88,13 +65,17 @@ body {
   line-height: 1.5;
 }
 
-/* Contact Info */
-.contact-info {
-  margin: 1.5rem 0;
-  text-align: left;
-  width: 100%; /* Ensures proper alignment on all devices */
+/* Image */
+.property-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in;
 }
 
+/* Contact Info */
 .contact-info p {
   font-size: 1rem;
   color: #333;
@@ -109,57 +90,39 @@ body {
 .contact-info a:hover {
   text-decoration: underline;
 }
-/* Contact Button Container */
+
+/* Button */
 .contact-button {
   margin-top: 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Centers the button */
-  align-items: center;
-  background: none; /* Removes background from the surrounding container */
-  border: none; /* Removes border */
-  box-shadow: none; /* Removes box shadow */
+  width: auto;
 }
 
-/* Contact Button */
 .contact-button a {
   text-decoration: none;
-  background-color: #457b9d; /* Teal button */
+  background-color: #457b9d;
   color: white;
-  padding: 0.9rem 1.5rem;
-  border-radius: 12px; /* Slightly rounder corners */
-  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: bold;
   display: inline-block;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease,
-    box-shadow 0.2s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
-  border: none; /* Removes any button borders */
-  outline: none; /* Ensures no outline is applied when focused */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-button a:hover {
   background-color: #1d3557;
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.contact-button a:focus {
-  outline: none; /* Removes focus outline */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds smooth focus effect */
+.contact-button.pulse {
+  animation: pulse 2s infinite;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  body {
-    padding: 0.5rem;
-  }
-
-  .container {
-    margin: 0.5rem auto;
-  }
-
   .card {
     padding: 1.5rem;
   }
@@ -185,31 +148,38 @@ body {
   }
 
   .contact-button a {
-    font-size: 1rem;
-    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }
 
-/* Responsive for Large Screens */
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 600px; /* Slightly larger on big screens */
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  .animate-title {
-    font-size: 2.5rem;
+  to {
+    opacity: 1;
   }
+}
 
-  .subtitle {
-    font-size: 1.6rem;
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
-
-  .description {
-    font-size: 1.1rem;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-  .contact-button a {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
   }
 }
