@@ -1,33 +1,19 @@
-/* Reset and global styles */
+/* Enable scrolling for the entire app */
 body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background: #fefaf0; /* Muted parchment yellow background */
+  background: linear-gradient(
+    180deg,
+    #fefaf0 60%,
+    #f7f3e9
+  ); /* Subtle gradient */
   color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
-  overflow: hidden;
-}
-
-/* Title styling */
-.animate-title {
-  font-size: 2.2rem; /* Larger font size for main title */
-  color: #457b9d; /* Teal for the title */
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.animate-title .subtitle {
-  font-size: 1.5rem; /* Slightly smaller for subtitle */
-  color: #e63946; /* Red to make it pop */
-  font-weight: 600;
-  display: block; /* Forces it to appear beneath the main title */
-  margin-top: 0.3rem;
-  animation: fadeIn 1.5s ease-in;
+  overflow-y: auto; /* Enables vertical scrolling */
 }
 
 /* Container for the entire app */
@@ -35,7 +21,7 @@ body {
   width: 100%;
   max-width: 420px;
   padding: 1rem;
-  margin: 0 auto;
+  margin: 1rem auto; /* Adds top/bottom spacing */
   box-sizing: border-box;
 }
 
@@ -43,7 +29,7 @@ body {
 .card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for a polished look */
   padding: 2rem;
   text-align: center;
   animation: slideIn 1s ease-out;
@@ -52,70 +38,45 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Animations */
-@keyframes slideIn {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* Adjust the image size to fit better on smaller screens */
+.property-image {
+  width: 100%; /* Ensures the image doesn't overflow */
+  max-height: 300px; /* Limits the height of the image */
+  object-fit: cover; /* Keeps the aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 1rem; /* Adds spacing below the image */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
+/* Title and subtitle adjustments */
 .animate-title {
-  animation: fadeIn 1.2s ease-out;
-}
-
-.animate-fade {
-  animation: fadeIn 2s ease-out;
-}
-
-.animate-image {
-  animation: fadeIn 2s ease-in;
-}
-
-.animate-button {
-  animation: fadeIn 2.5s ease-out;
-}
-
-/* Title and description */
-.card h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #457b9d; /* Teal title */
   margin-bottom: 0.5rem;
+  line-height: 1.2; /* Better spacing between lines */
 }
 
-.card .description {
+.subtitle {
+  font-size: 1.4rem;
+  color: #e63946; /* Red for subtitle */
+  font-weight: bold;
+  margin-top: 0.2rem;
+}
+
+/* Description */
+.description {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 1.5rem;
-}
-
-/* Property image styling */
-.property-image {
-  width: 100%;
-  height: auto;
   margin: 1rem 0;
-  border-radius: 8px;
+  line-height: 1.5;
 }
 
-/* Contact Info */
+/* Contact Info section styling */
 .contact-info {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  text-align: left; /* Aligns text to the left for better readability */
 }
 
 .contact-info p {
@@ -133,13 +94,7 @@ body {
   text-decoration: underline;
 }
 
-.urgent-message {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #e63946; /* Red for urgency */
-}
-
-/* Contact button */
+/* Contact button styling */
 .contact-button {
   margin-top: 1.5rem;
 }
@@ -148,35 +103,50 @@ body {
   text-decoration: none;
   background-color: #457b9d; /* Teal button */
   color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px; /* Slightly rounder corners */
+  font-size: 1.1rem;
   font-weight: bold;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
 }
 
 .contact-button a:hover {
   background-color: #1d3557;
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive design for all phones and tablets */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   body {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
-  .card h1 {
-    font-size: 1.5rem;
+  .container {
+    margin: 0.5rem auto;
   }
 
-  .card .description {
-    font-size: 0.9rem;
+  .card {
+    padding: 1.5rem;
   }
 
   .property-image {
-    margin: 0.5rem 0;
+    max-height: 200px; /* Reduce image size for smaller devices */
+  }
+
+  .animate-title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
   }
 
   .contact-info p {
@@ -184,7 +154,7 @@ body {
   }
 
   .contact-button a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.7rem 1rem;
   }
 }

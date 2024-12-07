@@ -8,12 +8,13 @@ const App = () => {
         <h1 className="animate-title">
           🏡 The Pods
           <br />
-          <span className="subtitle">Rooms for Rent</span>
+          <span className="subtitle">Studios for Rent</span>
         </h1>{" "}
         <p className="description animate-fade">
-          Modern, fully-equipped rooms in the heart of Kingston. Perfect for
-          student and young professionals <br />
-          <strong>Don’t wait—rooms are going fast!</strong>
+          Modern, fully-equipped studios in kingston. Perfect for student and
+          young professional
+          <br />
+          <strong>Don’t wait-spaces are going fast!</strong>
         </p>
         <img
           src="/apartment.jpg"
@@ -36,11 +37,11 @@ const App = () => {
             and public transportation.
           </p>
           <p>
-            📞 <strong>Call:</strong> <a href="tel:+17848380">876-784-8380</a>
+            📞 <strong>Call:</strong> <a href="tel:8767848380">876-784-8380</a>
           </p>
         </div>
         <button className="contact-button animate-button">
-          <a href="tel:+17848380">Contact Now</a>
+          <a href="tel:+876-784-8380">Contact Now</a>
         </button>
       </div>
     </div>
