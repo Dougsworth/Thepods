@@ -16,7 +16,7 @@ const App = () => {
           <strong>Don’t wait—rooms are going fast!</strong>
         </p>
         <img
-          src="apartment.jpg"
+          src="public/apartment.jpg"
           alt="Rental Property"
           className="property-image animate-image"
         />
