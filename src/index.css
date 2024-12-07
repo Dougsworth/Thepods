@@ -109,32 +109,45 @@ body {
 .contact-info a:hover {
   text-decoration: underline;
 }
-
-/* Contact Button */
+/* Contact Button Container */
 .contact-button {
   margin-top: 1.5rem;
   width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the button */
+  align-items: center;
+  background: none; /* Removes background from the surrounding container */
+  border: none; /* Removes border */
+  box-shadow: none; /* Removes box shadow */
 }
 
+/* Contact Button */
 .contact-button a {
   text-decoration: none;
-  background-color: #457b9d;
+  background-color: #457b9d; /* Teal button */
   color: white;
   padding: 0.9rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 12px; /* Slightly rounder corners */
   font-size: 1.1rem;
   font-weight: bold;
   display: inline-block;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.2s ease,
     box-shadow 0.2s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
+  border: none; /* Removes any button borders */
+  outline: none; /* Ensures no outline is applied when focused */
 }
 
 .contact-button a:hover {
   background-color: #1d3557;
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button a:focus {
+  outline: none; /* Removes focus outline */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds smooth focus effect */
 }
 
 /* Responsive Design */
