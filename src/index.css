@@ -1,0 +1,190 @@
+/* Reset and global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: #fefaf0; /* Muted parchment yellow background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Title styling */
+.animate-title {
+  font-size: 2.2rem; /* Larger font size for main title */
+  color: #457b9d; /* Teal for the title */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.animate-title .subtitle {
+  font-size: 1.5rem; /* Slightly smaller for subtitle */
+  color: #e63946; /* Red to make it pop */
+  font-weight: 600;
+  display: block; /* Forces it to appear beneath the main title */
+  margin-top: 0.3rem;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Container for the entire app */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Card style for the content */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  animation: slideIn 1s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-title {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.animate-fade {
+  animation: fadeIn 2s ease-out;
+}
+
+.animate-image {
+  animation: fadeIn 2s ease-in;
+}
+
+.animate-button {
+  animation: fadeIn 2.5s ease-out;
+}
+
+/* Title and description */
+.card h1 {
+  font-size: 1.8rem;
+  color: #457b9d; /* Teal title */
+  margin-bottom: 0.5rem;
+}
+
+.card .description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Property image styling */
+.property-image {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+/* Contact Info */
+.contact-info {
+  margin: 1rem 0;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: #e63946; /* Red for links */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.urgent-message {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e63946; /* Red for urgency */
+}
+
+/* Contact button */
+.contact-button {
+  margin-top: 1.5rem;
+}
+
+.contact-button a {
+  text-decoration: none;
+  background-color: #457b9d; /* Teal button */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button a:hover {
+  background-color: #1d3557;
+  transform: scale(1.05);
+}
+
+/* Responsive design for all phones and tablets */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+  }
+
+  .card .description {
+    font-size: 0.9rem;
+  }
+
+  .property-image {
+    margin: 0.5rem 0;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .contact-button a {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+}
