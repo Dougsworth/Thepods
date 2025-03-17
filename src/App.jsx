@@ -23,11 +23,11 @@ const App = () => {
 
         <div className="description-container">
           <p className="description">
-            Unfurnished apartment at 6 University Dr, Kingston—near universities
-            🎓 & amenities 🏪.
+            Unfurnished apartment at 6 University Dr—near unis 🎓 & amenities
+            🏪. Private bath & kitchen.
           </p>
           <p className="description rent-details">
-            Rent: $49,000/month (light 💡 + water 💧 included).
+            Rent: $49,000/mo (light 💡 + water 💧 incl.).
           </p>
           <p className="description urgency">
             <strong>Limited spots!</strong>
@@ -58,7 +58,7 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              6 University Dr, Kingston
+              6 University Dr
             </a>
           </p>
           <p>
