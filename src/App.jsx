@@ -21,11 +21,18 @@ const App = () => {
         </h1>
         <p className="subtitle">Spacious Apartments</p>
 
-        <p className="description">
-          Unfurnished apartment at 6 University Dr, Kingston—near universities
-          🎓 & amenities 🏪. Rent: $49,000/month (light 💡 + water 💧 included).{" "}
-          <strong>Limited spots!</strong>
-        </p>
+        <div className="description-container">
+          <p className="description">
+            Unfurnished apartment at 6 University Dr, Kingston—near universities
+            🎓 & amenities 🏪.
+          </p>
+          <p className="description rent-details">
+            Rent: $49,000/month (light 💡 + water 💧 included).
+          </p>
+          <p className="description urgency">
+            <strong>Limited spots!</strong>
+          </p>
+        </div>
 
         <div className="image-container">
           <img
