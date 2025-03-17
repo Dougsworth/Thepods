@@ -23,11 +23,11 @@ const App = () => {
 
         <div className="description-container">
           <p className="description">
-            Unfurnished apartment at 6 University Dr—near unis 🎓 & amenities
-            🏪. Private bath & kitchen.
+            Unfurnished apt at 6 University Dr—near unis 🎓 & amenities 🏪.
+            Private bath & kitchen.
           </p>
           <p className="description rent-details">
-            Rent: $49,000/mo (light 💡 + water 💧 incl.).
+            <strong>Rent: $49,000/mo (light 💡 + water 💧 incl.).</strong>
           </p>
           <p className="description urgency">
             <strong>Limited spots!</strong>
@@ -40,7 +40,7 @@ const App = () => {
             alt="Spacious Apartment"
             className="property-image"
           />
-          <div className="image-overlay">Tap to View</div>
+          {/* <div className="image-overlay">Tap to View</div> */}
         </div>
 
         <div className="features-grid">
@@ -75,9 +75,20 @@ const App = () => {
           </p>
         </div>
 
-        <button className="contact-button">
-          <a href="tel:+8767848380">Secure Now 🌟</a>
-        </button>
+        <div className="button-container">
+          <button className="contact-button">
+            <a href="tel:+8767848380">Secure Now 🌟</a>
+          </button>
+          <button className="form-button">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf3rEQu4Y4IhKpjuIFV6hEqVyHan9NlU02XWAXXLy8V7CtKJA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply Now
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   );
