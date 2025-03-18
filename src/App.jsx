@@ -1,8 +1,9 @@
-// App.js
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 
 const App = () => {
+  const [showPopup, setShowPopup] = useState(true);
+
   useEffect(() => {
     const handleScroll = () => {
       const image = document.querySelector(".property-image");
@@ -13,8 +14,47 @@ const App = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <div className="container">
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-modal">
+            <button className="popup-close" onClick={closePopup}>
+              ✕
+            </button>
+            <h2>📞 Number Can't Be Reached?</h2>
+            <strong>
+              {" "}
+              <p>Refresh page to see this message again.</p>
+            </strong>
+            <p>If you can't reach the number, please:</p>
+
+            <div className="popup-contact-options">
+              <a
+                href="https://wa.me/18767848380"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="popup-whatsapp-btn"
+              >
+                WhatsApp Us
+              </a>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf3rEQu4Y4IhKpjuIFV6hEqVyHan9NlU02XWAXXLy8V7CtKJA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="popup-form-btn"
+              >
+                Use Google Form
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="card">
         <h1 className="glowing-text">
           <span className="icon">🏡</span> The Pods
@@ -32,7 +72,6 @@ const App = () => {
             <strong>Limited spots!</strong>
           </p>
         </div>
-
         {/* Direct YouTube Link - Simplified */}
         <div className="image-container">
           <a
@@ -56,7 +95,6 @@ const App = () => {
             </div>
           </a>
         </div>
-
         <div className="features-grid">
           <span>🎓 Near Unis</span>
           <span>🏪 Amenities</span>
