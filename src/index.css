@@ -197,7 +197,7 @@ body {
   background: linear-gradient(135deg, #3182ce, #2b6cb0);
   color: #fff;
   padding: 0.6rem; /* Increased from 0.5rem */
-  border-radius: 30px;
+  border-radius: 2px;
   font-size: 0.95rem; /* Increased from 0.85rem */
   font-weight: 600;
   display: block;
@@ -225,7 +225,7 @@ body {
   background: linear-gradient(135deg, #27ae60, #2ecc71);
   color: #fff;
   padding: 0.6rem; /* Increased from 0.5rem */
-  border-radius: 30px;
+  border-radius: 2px;
   font-size: 0.95rem; /* Increased from 0.85rem */
   font-weight: 600;
   display: block;
