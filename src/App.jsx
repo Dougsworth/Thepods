@@ -20,7 +20,6 @@ const App = () => {
           <span className="icon">🏡</span> The Pods
         </h1>
         <p className="subtitle">Spacious Apartments</p>
-
         <div className="description-container">
           <p className="description">
             Unfurnished apt at 6 University Dr—near unis 🎓 & amenities 🏪.
@@ -34,13 +33,28 @@ const App = () => {
           </p>
         </div>
 
+        {/* Direct YouTube Link - Simplified */}
         <div className="image-container">
-          <img
-            src="/apart.jpeg"
-            alt="Spacious Apartment"
-            className="property-image"
-          />
-          {/* <div className="image-overlay">Tap to View</div> */}
+          <a
+            href="https://youtube.com/shorts/VjvPFSthZsM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="video-link"
+          >
+            <img
+              src="/apart.jpeg"
+              alt="Spacious Apartment"
+              className="property-image"
+            />
+            <div className="video-play-overlay">
+              <div className="play-button">
+                <svg viewBox="0 0 24 24" width="48" height="48">
+                  <path fill="#FFFFFF" d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <div className="watch-text">Watch Video Tour</div>
+            </div>
+          </a>
         </div>
 
         <div className="features-grid">
@@ -49,7 +63,6 @@ const App = () => {
           <span>💡 Light Incl.</span>
           <span>💧 Water Incl.</span>
         </div>
-
         <div className="contact-info">
           <p>
             📍{" "}
@@ -74,7 +87,6 @@ const App = () => {
             📧 <a href="mailto:6universitydrive@gmail.com">Email</a>
           </p>
         </div>
-
         <div className="button-container">
           <button className="contact-button">
             <a href="tel:+8767848380">Secure Now 🌟</a>
