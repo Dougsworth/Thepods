@@ -76,7 +76,7 @@ const App = () => {
           </p>
           <p>
             📞{" "}
-            <a href="tel:+8767848380">
+            <a href="tel:18767848380">
               (876) 784-8380{" "}
               <span role="img" aria-label="WhatsApp">
                 📱
@@ -89,7 +89,7 @@ const App = () => {
         </div>
         <div className="button-container">
           <button className="contact-button">
-            <a href="tel:+8767848380">Secure Now 🌟</a>
+            <a href="tel:18767848380">Secure Now 🌟</a>
           </button>
           <button className="form-button">
             <a
