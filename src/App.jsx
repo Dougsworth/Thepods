@@ -27,7 +27,7 @@ const App = () => {
             Private bath & kitchen.
           </p>
           <p className="description rent-details">
-            <strong>Rent: $49,000/mo (light 💡 + water 💧 incl.).</strong>
+            <strong>Rent: $50,000/mo (light 💡 + water 💧 incl.).</strong>
           </p>
           <p className="description urgency">
             <strong>Limited spots!</strong>
